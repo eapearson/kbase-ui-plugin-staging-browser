@@ -1,0 +1,50 @@
+# Staging Browser 
+---
+package:
+  author: Erik Pearson
+  name: staging-browser
+  description: A file browser for the Staging Area
+source:
+  styles:
+    -
+      file: styles.css
+install:
+  widgets:
+    -
+      module: panel
+      id: kb_staging-browser_panel
+      type: factory
+  ko-components:
+    -
+      name: staging-browser/main
+      module: components/main
+    -
+      name: staging-browser/browser
+      module: components/browser      
+    -
+      name: staging-browser/search-bar
+      module: components/searchbar
+    -
+      name: staging-browser/filter-bar
+      module: components/filterbar      
+    -
+      name: staging-browser/paging-bar
+      module: components/pagingbar 
+    -
+      name: staging-browser/result
+      module: components/result   
+    -
+      name: staging-browser/generic/table
+      module: components/generic/table
+  routes:
+    -
+      path: [staging-browser]
+      widget: kb_staging-browser_panel
+      authorization: true
+  menu:
+    -
+      name: staging-browser
+      definition:
+        path: staging-browser
+        label: Staging Browser
+        icon: flask
