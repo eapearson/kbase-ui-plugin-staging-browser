@@ -273,14 +273,14 @@ define([
             }
         });
 
-        console.log('in table...', table.rows());
-        table.rows.subscribe(function (newValue) {
-            console.log('rows update!', newValue);
-        });
+        // console.log('in table...', table.rows());
+        // table.rows.subscribe(function (newValue) {
+        //     console.log('rows update!', newValue);
+        // });
 
-        table.state.subscribe(function (newValue) {
-            console.log('new state: ', newValue);
-        });
+        // table.state.subscribe(function (newValue) {
+        //     console.log('new state: ', newValue);
+        // });
         
         return {
             rows: table.rows,

@@ -38,7 +38,7 @@ define([
     function viewModel(params) {
         var search = params.search;
 
-        console.log('in result?', params);
+        // console.log('in result?', params);
 
         function sortBy(column) {
             // fake for now...
@@ -58,9 +58,9 @@ define([
             search.sortBy(column.sort);
         }
 
-        search.searchResults.subscribe(function (newValue) {
-            console.log('got the change...', newValue);
-        });
+        // search.searchResults.subscribe(function (newValue) {
+        //     console.log('got the change...', newValue);
+        // });
 
         return {
             table: {

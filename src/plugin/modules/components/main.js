@@ -72,7 +72,7 @@ define([
         });
 
         var searchState = ko.pureComputed(function () {
-            console.log('search state calc...', searching());
+            // console.log('search state calc...', searching());
             if (searching()) {
                 return 'inprogress';
             }
@@ -136,7 +136,7 @@ define([
         // The job here is to reset the page, if necessary, due to 
         // a change in page size.
         pageSize.subscribeChanged(function (newValue, oldValue) {
-            console.log('page size changed', page(), newValue, oldValue);
+            // console.log('page size changed', page(), newValue, oldValue);
             var currentPage = page();
 
             if (!currentPage) {
